@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manager View</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <style>
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .header{
+      background-color: black;
+      padding: 3rem 4rem 2rem 4rem;
+      color: white;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header--heading{
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .header--logout{
+      background-color: white;
+      color: black;
+      padding: 1rem 3rem;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      border: 1px solid white;
+      transition: all 0.3s ease-in-out;
+    }
+    .header--logout:hover{
+      background-color: black;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+    .working--area{
+      padding: 5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .add--fooditem, .update--fooditem, .delete--fooditem{
+      padding: 4rem 6rem;
+      min-height: 7vh;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      border-radius: 0.5rem;
+      border: 1px solid black;
+      transition: all 0.3s ease-in-out;
+    }
+    .add--fooditem:hover, .update--fooditem:hover, .delete--fooditem:hover{
+      background-color: white;
+      color: black;
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <h2 class="header--heading">Manager</h2>
+    <a href="../../logout.php" class="header--logout">Logout</a>
+  </header>
+  <main class="working--area">
+    <a href="./add_fooditem.html" class="add--fooditem">Add Food Item</a>
+    <a href="./update_fooditem.html" class="update--fooditem">Update Food Item</a>
+    <a href="./delete_fooditem.php" class="delete--fooditem">Delete Food Item</a>
+  </main>
+</body>
+</html>

@@ -1,0 +1,138 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    position: relative;
+}
+.container{
+    position: relative;
+    background-image: url("../assets/imgs/login-background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.container--Overlay{
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 20;
+    background-color: black;
+    opacity: 40%;
+}
+.sub-container{
+    width: 400px;
+    position: relative;
+    z-index: 30;
+    user-select: none;
+    border-radius: 0.3rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    min-height: 50vh;
+    margin: auto;
+    background-color: white;
+    box-shadow: 10px 10px 48px -5px rgba(0,0,0,0.57);
+    -webkit-box-shadow: 10px 10px 48px -5px rgba(0,0,0,0.57);
+    -moz-box-shadow: 10px 10px 48px -5px rgba(0,0,0,0.57);
+}
+.form__logo{
+    width: 80%;
+    margin: auto;
+}
+.form__inputs{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 1rem 1rem 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form__submission{
+    display: flex;
+    padding:  1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+.OR{
+    margin-top: -0.75rem;
+    margin-bottom: -0.75rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.form__logo > img{
+    width: 55%;
+    margin-left: 25%;
+}
+.form__inputs--username > img,.form__inputs--password > img{
+    width: 13px;
+    padding-right: 1rem;
+    border-right: 1px solid #ccc;
+}
+.form__inputs--username,.form__inputs--password{
+    padding: 0.7rem 0.7rem 0.7rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-right: 16px solid transparent;
+    gap: 1rem;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 1.03rem;
+}
+input[type="submit"]{
+    border: 1px solid #ccc;
+    border-right: 0px solid transparent ;
+    width: fit-content;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: 0.95rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+select{
+    outline: none;
+    border: 1px solid #ccc;
+    border-right: 16px solid transparent;
+    width: fit-content;
+    border-radius: 0.1rem;
+    font-size: 0.95rem;
+    padding: 0.5rem 3rem 0.5rem 0.5rem;
+}
+input[type="submit"]:enabled:hover{
+    border-right: 0px solid transparent;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+    background-image: linear-gradient(to right, #562813, #94874C);
+    transition: background-color 0.3s ease-in-out;
+    color: white;
+}
+input::placeholder{
+    font-size: 0.95rem;
+}
+
+@media only screen and (max-width : 500px) {
+   .sub-container{
+        width: auto;
+        min-height: 100vh;
+   }
+   .form__logo{
+        margin-top: 12rem;
+   }
+}
